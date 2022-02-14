@@ -4,10 +4,108 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Planets</title>
+		<title>Registration</title>
 	</head>
-	<frameset cols="25%,75%">
-        <frame name="menu" src="menu.html">
-        <frame name="content" src="content.html">
-    </frameset>
+	<body>
+		<form action="request.php" method="post">
+			<table bgcolor="cyan" cellpadding="10">
+				<tr>
+					<th colspan="2">Student Registration Form</th>
+				</tr>
+				<tr>
+					<td width="20px">Name</td>
+					<td><input type="text" name="name" required /></td>
+				</tr>
+				<tr>
+					<td>Father Name</td>
+					<td><input type="text" name="father_name" required /></td>
+				</tr>
+				<tr>
+					<td>Postal Address</td>
+					<td><input type="text" name="postal_address" /></td>
+				</tr>
+				<tr>
+					<td>Personal Address</td>
+					<td><input type="text" name="person_address" required /></td>
+				</tr>
+				<tr>
+					<td>Sex</td>
+					<td>
+						<input type="radio" name="sex" value="male" required />Male
+						<input type="radio" name="sex" value="female"/>Female
+					</td>
+				</tr>
+				<tr>
+					<td>City</td>
+					<td>
+						<select name="city">
+							<option value="" disabled selected>select..</option>
+							<option value="dehradun">Dehradun</option>
+							<option value="delhi">Delhi</option>
+							<option value="lucknow">Lucknow</option>
+							<option value="kanpur">Kanpur</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Course</td>
+					<td>
+						<select name="course">
+							<option value="" disabled selected>select..</option>
+							<option value="btech">B.Tech</option>
+							<option value="mba">MBA</option>
+							<option value="mtech">M.Tech</option>
+							<option value="bba">BBA</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>District</td>
+					<td>
+						<select name="district">
+							<option value="" disabled selected>select..</option>
+							<option value="tehri">Tehri</option>
+							<option value="chamoli">Chamoli</option>
+							<option value="rudraprayag">Rudraprayag</option>
+							<option value="haridwar">Haridwar</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>State</td>
+					<td>
+						<select name="state">
+							<option value="" disabled selected>select..</option>
+							<option value="uttarakhand">Uttarakhand</option>
+							<option value="mpradesh">Madhya Pradesh</option>
+							<option value="punjab">Punjab</option>
+							<option value="ladakh">Ladakh</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>PinCode</td>
+					<td>
+						<input type="text" name="pincode" pattern="[0-9]{6}" required />
+					</td>
+				</tr>
+				<tr>
+					<td>EmailId</td>
+					<td><input type="email" name="email" required /></td>
+				</tr>
+				<tr>
+					<td>DOB</td>
+					<td><input type="date" name="DOB" /></td>
+				</tr>
+				<tr>
+					<td>MobileNo</td>
+					<td><input type="text" pattern="[0-9]{10}" name="pno" required /></td>
+				</tr>
+				<tr>
+					<td><button type="reset">Reset</button></td>
+					<td><button type="submit">Submit Form</button></td>
+				</tr>
+			</table>
+		</form>
+	</body>
 </html>
